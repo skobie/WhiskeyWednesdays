@@ -1,0 +1,14 @@
+.happy-hour{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+.happy-hour img {
+    max-width:80%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}

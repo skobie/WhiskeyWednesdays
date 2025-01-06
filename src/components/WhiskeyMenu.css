@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300..700&display=swap');
+
+.loading {
+  font-size: 2rem;
+  text-align: center;
+  color:gold;
+  text-shadow: 2px 2px black;
+  font-family: 'Libre Baskerville', serif;
+  margin: 200px;
+}
+
+.whiskey-menu {
+  color: white;
+  padding: 20px;
+  font-family: 'Libre Baskerville', serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Black shadow underline */
+  opacity: .9;
+  transition: all 0.3s ease-in-out;
+}
+
+.whiskey-menu h1 {
+  font-size: 2.5rem;
+  color: gold; /* Gold */
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  text-shadow: 4px 4px black;
+}
+
+.category-container {
+  display: inline;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute sections evenly */
+  gap: 30px; /* Add some space between the sections */
+}
+
+.category-section{ /* Burgundy */
+  border-radius: 10px;
+  width: 98%; /* Ensure responsiveness */ /* Restrict max width */
+  padding: 20px;
+}
+.category-section:hover {
+  box-shadow: 0 0 15px 5px gold; /* Gold glowing effect */
+  background-color: rgba(0, 0, 0, 0.8); /* Optional: darker background on hover */
+}
+
+.category-section h2 {
+  font-size: 1.8rem;
+  color: gold; /* Gold header for each section */
+  font-family: 'Libre Baskerville', serif;
+  text-shadow: 2px 2px black;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.whiskey-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.whiskey-item {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #44444400; /* Dark background for each drink item */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.whiskey-item:hover {
+  box-shadow: 0 0 15px 5px gold; /* Gold glowing effect */
+  background-color: #5555556e; /* Slightly lighter on hover */
+}
+
+.whiskey-item h3 {
+  font-size: 1rem;
+  color: gold;
+  text-shadow: 2px 2px black;
+}
+
+.whiskey-details {
+  display: none;
+  margin-top: 10px;
+}
+
+.whiskey-item.expanded .whiskey-details {
+  display: block;
+  color: gold;
+}
+
+.whiskey-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 5px;
+  color:white;
+  text-shadow: 2px 2px black;
+}
+
+.whiskey-image {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.delete-button {
+  background-color: #e25858;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c74747;
+}
+
+@media screen and (max-width: 1024px) {
+  .category-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap sections on smaller screens */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Adjust spacing */
+  }
+
+  .category-section {
+    width: 45%; /* Adjust width to fit two sections per row */
+    margin-bottom: 20px; /* Add space between rows */
+  }
+
+  .whiskey-menu h1 {
+    font-size: 2rem; /* Adjust header size for smaller screens */
+  }
+
+  .category-section h2 {
+    font-size: 1.5rem; /* Slightly smaller section headers */
+  }
+
+  .whiskey-item h3 {
+    font-size: 1rem; /* Adjust item name size */
+  }
+}
+
+/* Responsive Design for Mobile (Landscape) */
+@media screen and (max-width: 768px) {
+  .loading {
+    margin:100px;
+    padding-left:50px;
+  }
+  
+  
+  .category-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+    gap: 15px; /* Reduce spacing between sections */
+  }
+
+  .category-section {
+    width: 80%; /* Use more screen width */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .whiskey-menu h1 {
+    font-size: 1.8rem; /* Smaller title for mobile landscape */
+  }
+
+  .category-section h2 {
+    font-size: 1.3rem; /* Reduce section header size */
+  }
+
+  .whiskey-item {
+    padding: 8px; /* Smaller padding for drink items */
+  }
+
+  .whiskey-item h3 {
+    font-size: 0.9rem; /* Smaller text for item names */
+  }
+}
+
+/* Responsive Design for Mobile (Portrait) */
+@media screen and (max-width: 480px) {
+  .loading {
+    font-size: 1.5rem;
+    margin:100px;
+    padding-left:40px;
+  }
+  
+  .category-container {
+    flex-direction: column; /* Stack sections vertically */
+    gap: 10px; /* Tighten spacing for smaller screens */
+  }
+
+  .category-section {
+    width: 90%; /* Full width for extra-small screens */
+    padding: 10px; /* Reduce padding further */
+  }
+
+  .whiskey-menu {
+    padding: 15px; /* Reduce overall padding for smaller screens */
+  }
+
+  .whiskey-menu h1 {
+    font-size: 1.6rem; /* Adjust title size for mobile portrait */
+  }
+
+  .category-section h2 {
+    font-size: 1.2rem; /* Smaller headers */
+    margin-bottom: 10px; /* Tighten spacing */
+  }
+
+  .whiskey-item {
+    padding: 6px; /* Reduce item padding */
+  }
+
+  .whiskey-item h3 {
+    font-size: 0.8rem; /* Smallest text size for item names */
+  }
+
+  .whiskey-price {
+    font-size: 1rem; /* Adjust price font size */
+  }
+}

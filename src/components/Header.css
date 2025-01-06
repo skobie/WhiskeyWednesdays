@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300..700&display=swap');
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #30010c; /* Burgundy */
+  padding: 1rem 2rem;
+  box-shadow: 6px 0px 4px 6px rgba(0, 0, 0, 0.4); /* Black shadow underline */
+  opacity: .9;
+  transition: all 0.3s ease-in-out; /* Smooth transition for changes */
+  z-index:1;
+}
+.header:hover {
+  box-shadow: 0 0 15px 5px gold; /* Gold glowing effect */
+  background-color: rgba(0, 0, 0, 0.8); /* Optional: darker background on hover */
+}
+
+.header .logo h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: gold; /* Gold */
+  font-family: 'Libre Baskerville', serif; /* Elegant font for the name */
+  text-shadow: 4px 4px black;
+}
+
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: gold;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
+  text-shadow: 2px 2px black;
+}
+
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative; /* Required for positioning the dropdown menu */
+}
+
+.dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #30010c; /* Burgundy */
+  padding: 1rem;
+  list-style-type: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  width: 300px; /* Set a fixed width for the dropdown */
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for columns */
+  justify-content: space-between; /* Distribute items evenly */
+  opacity: 0; /* Make the dropdown invisible */
+  visibility: hidden; /* Prevent interaction */
+  pointer-events: none; /* Prevent the dropdown from capturing mouse events */
+  transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth fade-in transition */
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 2px solid gold;
+}
+
+/* Show the dropdown when hovering over the parent */
+.dropdown:hover .dropdown-menu {
+  opacity: 1; /* Make the dropdown visible */
+  visibility: visible; /* Make it interactable */
+  pointer-events: auto; /* Allow mouse events */
+  transition: opacity 0.3s ease, visibility 0s; /* Smooth fade-in transition */
+  z-index:1;
+}
+
+.dropdown-menu li {
+  margin: 0.5rem 1rem;
+  display: block; /* Make each item display vertically */
+  text-align: center;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  color: gold;
+}
+
+/* Arrow styles remain the same */
+.arrow {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg); /* Rotates the arrow when the dropdown is open */
+}
+.user-menu {
+  position: relative;
+}
+
+.user-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+.user-icon:hover {
+  color: #f00; /* Highlight color */
+}
+
+/* Dropdown menu styles */
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #30010c;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 2px solid gold;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 10;
+  width: 150px;
+  
+}
+
+.user-dropdown li {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  font-weight:bold;
+}
+
+.user-dropdown li:hover {
+  color:gold;
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-direction: column; /* Stack logo and nav-links vertically */
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .header .logo h1 {
+    font-size: 2rem; /* Adjust logo font size */
+    text-align: center; /* Center align the logo */
+  }
+
+  .nav-links {
+    justify-content: center; /* Center nav links */
+    flex-wrap: wrap; /* Wrap links to the next line if needed */
+  }
+
+  .nav-links li {
+    margin-right: 1rem; /* Reduce spacing between links */
+  }
+
+  .nav-links li a {
+    font-size: 1rem; /* Adjust link font size */
+  }
+
+  .dropdown .dropdown-menu {
+    width: 100%; /* Full-width dropdown on smaller screens */
+  }
+}
+
+/* Responsive Design for Mobile (Landscape) */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center; /* Center items */
+    padding: 0.5rem 1rem; /* Reduce padding further */
+  }
+
+  .header .logo h1 {
+    font-size: 1.8rem; /* Smaller logo size */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack nav links vertically */
+    align-items: center; /* Center links */
+  }
+
+  .nav-links li {
+    margin-bottom: 0.5rem; /* Add spacing between vertical links */
+    margin-right: 0; /* Remove horizontal margin */
+  }
+
+  .nav-links li a {
+    font-size: 0.9rem; /* Smaller font size for links */
+  }
+
+  .dropdown .dropdown-menu {
+    width:60%; /* Adjust dropdown width */ /* Center dropdown */
+    text-align: center;
+    border-radius: 0; 
+  }
+  .dropdown-menu li  {
+    margin: auto;
+    padding: auto;
+    font-size: 12px;
+    
+  }
+  .dropdown-menu li a {
+    font-size:.6rem;
+    text-align: center;
+  }
+
+}
+
+/* Responsive Design for Mobile (Portrait) */
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 0.5rem; /* Minimal padding */
+  }
+
+  .header .logo h1 {
+    font-size: 1.5rem; /* Smallest logo size */
+  }
+
+  .nav-links li {
+    margin-right:20px;
+    margin-bottom: 0.3rem; /* Tighten spacing */
+  }
+
+  .nav-links li a {
+    font-size: 0.8rem; /* Smallest font size for links */
+  }
+
+  .dropdown .dropdown-menu {
+    width: 70%; /* Full width dropdown */
+    border-radius: 0; /* Remove border radius */
+    padding: 0.5rem; /* Compact padding */
+  }
+
+  .dropdown-menu li a {
+    padding: 0.3rem; /* Compact spacing */
+    font-size: 0.4rem; /* Adjust font size */
+    text-align: center;
+  }
+  .dropdown-menu li{
+    padding: auto;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .user-dropdown {
+    width: 100px; /* Narrower dropdown */
+    padding: 0.5rem; /* Compact padding */
+  }
+
+  .user-dropdown li {
+    padding: 5px; /* Smaller padding */
+    font-size: 0.8rem; /* Smaller text */
+  }
+}

@@ -1,0 +1,311 @@
+.book-event-container {
+    background-color: #30010cd7;
+    color: gold;
+    font-family: 'Libre Baskerville', serif;
+    padding: 30px;
+    margin: 20px;
+    text-shadow: 2px 2px black;
+  }
+  
+  .event-form {
+    background-color: #000000ad;
+    padding: 20px;
+    border-radius: 10px;
+    width:40%;
+    border: 1px solid gold;
+    margin:40px;
+  }
+  .event-form:hover{
+    box-shadow: 0 0 15px 5px gold;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    width:90%
+  }
+  
+  label {
+    font-size: 18px;
+    display: block;
+  }
+  
+  input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input.error, textarea.error {
+    border: 1px solid red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+  }
+  
+  .submit-btn {
+    background-color: gold;
+    color: #30010c;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0px 0px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #ffcc00;
+  }
+  
+  .contact-info {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .contact-info p {
+    font-size: 18px;
+  }
+
+  .picture-container {
+    max-width: 40%;
+    display: inline;
+    margin:40px;
+  }
+  .picture-container img {
+    width:100%;
+  }
+  .card-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Dynamic columns */
+    
+    }
+  
+  .food{
+    background-color: #000000ad;
+    margin: 20px;
+    padding:20px;
+    border:1px solid gold;
+    border-radius: 20px;
+  }
+  .food:hover{
+    box-shadow: 0 0 15px 5px gold;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .private-events {
+    background-color: #000000ad;
+    margin: 20px;
+    padding:20px;
+    border:1px solid gold;
+    border-radius: 20px;
+  }
+  .private-events:hover{
+    box-shadow: 0 0 15px 5px gold;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .drinks {
+    background-color: #000000ad;
+    margin: 20px;
+    padding:20px;
+    border:1px solid gold;
+    border-radius: 20px;
+  }
+  .drinks:hover{
+    box-shadow: 0 0 15px 5px gold;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .vendors {
+    background-color: #000000ad;
+    margin: 20px;
+    padding:20px;
+    border:1px solid gold;
+    border-radius: 20px;
+  }
+  .vendors:hover{
+    box-shadow: 0 0 15px 5px gold;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .title {
+    text-align: center;
+  }
+  .card-container h2{
+    text-align: center;
+  }
+  .card-container p {
+    text-align: center;
+  }
+  .email {
+    font-size:12px;
+  }
+  .body {
+    display: flex;
+  }
+  .karaoke {
+    display:flex;
+    margin:40px;
+    justify-content: space-between;
+    }
+  .karaoke video{
+    height:600px;
+  }
+  .videos {
+    justify-content: space-between;
+  }
+  .event-logo h1{
+    margin-top: 300px;
+  }
+  @media (max-width: 1024px) {
+  /* Adjust form width for tablets */
+  .event-form {
+    width: 70%;
+    margin: 20px auto;
+  }
+
+  .picture-container {
+    max-width: 80%;
+    margin: 20px auto;
+  }
+
+  .card-container {
+    margin-left: 0;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .karaoke{
+    text-align: center;
+    flex-direction: column;
+  }
+  .karaoke video {
+    height: 400px;
+  }
+
+  .event-logo h1 {
+    margin-top: 150px;
+  }
+  .body{
+    flex-direction: column;
+  }
+  .event-logo{
+    display:none;
+  }
+  .email p {
+    font-size:8px;
+}
+}
+
+@media (max-width: 768px) {
+  /* Adjust for smaller screens like smartphones */
+  .event-form {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .picture-container {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+
+  .card-container {
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .food, .private-events, .drinks, .vendors {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  input, textarea {
+    width: 100%;
+  }
+
+  .submit-btn {
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+  .karaoke{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .karaoke video {
+    height: 500px;
+  }
+
+  .event-logo {
+    margin-top: 100px;
+  }
+
+  .body {
+    flex-direction: column;
+    align-items: center;
+  }
+  .email p {
+    font-size:6px;
+}
+
+.karaoke h1{
+  font-size: 28px;
+}
+}
+
+@media (max-width: 480px) {
+  /* Additional tweaks for very small screens */
+  .event-form, .picture-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .food, .private-events, .drinks, .vendors {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input, textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  .karaoke{
+    flex-direction: column;
+  }
+  .karaoke video {
+    height: 300px;
+    width: 100%;
+  }
+  .karaoke h1{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .event-logo h1 {
+    font-size: 24px;
+    margin-top: 50px;
+  }
+  .picture-container h1{
+    font-size: 22px;
+  }
+  .title h2{
+    font-size: 16px;
+  }
+  .title h1 {
+    font-size: 24px;
+  }
+  .email p {
+    font-size:6px;
+  }
+}

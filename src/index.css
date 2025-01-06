@@ -1,0 +1,30 @@
+.app-container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background: url('/public/ww2.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  caret-color:transparent;
+  background-position: center; /* Center the image */
+  background-attachment: fixed;
+}
+
+html, body {
+  height: 100%; /* Ensures the background covers the full height */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the content spans the full height */
+}
+
+.content {
+  flex: 1; /* Pushes the footer to the bottom */
+}
+
+:hover{
+  transition: all 0.3s ease-in-out; /* Smooth transition for changes */
+}

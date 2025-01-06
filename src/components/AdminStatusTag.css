@@ -1,0 +1,18 @@
+.admin-status-tag {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    color: gold;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.admin-tag {
+    background-color: black;
+}
+
+.user-tag {
+    background-color: black;
+}

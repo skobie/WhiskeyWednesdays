@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300..700&display=swap');
+
+
+
+.home {
+    color: gold;
+    text-align: center;
+    padding: 20rem;
+
+  }
+  
+  
+  .welcome-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px black;
+    font-family: 'Libre Baskerville', serif;
+  }
+  
+  .welcome-section p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px black;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+  }
+  
+
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    text-decoration: none;
+    
+  }
+  
+  .cta-button {
+    background-color: gold;
+    color: #30010c; /* Burgundy */
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    text-shadow: 0px 1px 1px black;
+    font-family: 'Libre Baskerville', serif;
+  }
+
+  
+  .cta-button:hover {
+    box-shadow: 0 0 15px 5px gold; /* Gold glowing effect */
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: darker background on hover */
+    color: gold;
+  }
+
+  .cta-button a {
+    color:#610019;
+    text-decoration: none;
+  }
+  .cta-button a:hover{
+    color: gold;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .home {
+      padding: 10rem; /* Reduce padding for smaller screens */
+      background-size: cover; /* Ensure background image scales properly */
+    }
+  
+    .welcome-section h1 {
+      font-size: 2.5rem; /* Adjust heading size */
+    }
+  
+    .welcome-section p {
+      font-size: 1.2rem; /* Adjust paragraph font size */
+    }
+  
+    .cta-buttons {
+      gap: 1rem; /* Reduce spacing between buttons */
+    }
+  
+    .cta-button {
+      font-size: 1rem; /* Adjust button font size */
+      padding: 0.6rem 1.5rem; /* Reduce button padding */
+    }
+  }
+  
+  /* Responsive Design for Mobile (Landscape) */
+  @media screen and (max-width: 768px) {
+    .home {
+      padding: 5rem; /* Further reduce padding */
+      text-align: center; /* Ensure text is centered */
+    }
+  
+    .welcome-section h1 {
+      font-size: 2rem; /* Smaller heading size */
+    }
+  
+    .welcome-section p {
+      font-size: 1rem; /* Smaller paragraph size */
+    }
+  
+    .cta-buttons {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 1rem; /* Add spacing between stacked buttons */
+    }
+  
+    .cta-button {
+      width: 80%; /* Make buttons full-width */
+      margin: 0 auto; /* Center align buttons */
+    }
+  }
+  
+  /* Responsive Design for Mobile (Portrait) */
+  @media screen and (max-width: 480px) {
+    .home {
+      padding: 2rem; /* Minimal padding */
+      background-size: cover; /* Ensure proper scaling */
+    }
+  
+    .welcome-section h1 {
+      font-size: 1.8rem; /* Smallest heading size */
+    }
+  
+    .welcome-section p {
+      font-size: 0.9rem; /* Smallest paragraph size */
+    }
+  
+    .cta-buttons {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 0.8rem; /* Compact spacing */
+    }
+  
+    .cta-button {
+      font-size: 0.9rem; /* Smallest button font size */
+      padding: 0.5rem 1rem; /* Minimal padding */
+    }
+  }
