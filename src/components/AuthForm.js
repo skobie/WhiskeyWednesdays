@@ -18,12 +18,12 @@ const AuthForm = ({ onAuthComplete }) => {
            
             if (isSignUp) {
                 // Sign-up logic
-                await axios.post(`${process.env.REACT_APP_URL}api/auth/signup`, { email, password, isAdmin });
+                await axios.post('https://quiet-escarpment-80258-487788fc171b.herokuapp.com/api/auth/signup', { email, password, isAdmin });
                 alert('Sign-up Successful! Please Sign In.');
                 setIsSignUp(false); // Switch to sign-in mode
             } else {
                 // Sign-in logic
-                const response = await axios.post(`${process.env.REACT_APP_URL}api/auth/login`, { email, password });
+                const response = await axios.post('https://quiet-escarpment-80258-487788fc171b.herokuapp.com/}api/auth/login', { email, password });
                 const { token, isAdmin } = response.data;
 
                 // Store token in local storage
