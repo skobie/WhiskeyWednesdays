@@ -321,6 +321,7 @@
 
     .footer-column form input {
         font-size: 12px;
+        width:90%;
     }
 
     .footer-column form button {

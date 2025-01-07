@@ -213,6 +213,7 @@
   button {
     font-size: 1rem; /* Smaller button text */
     padding: 0.8rem 1.5rem;
+    max-width: 97%;
   }
 
   .whiskey-item {
