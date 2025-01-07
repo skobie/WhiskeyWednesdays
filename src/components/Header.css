@@ -270,4 +270,8 @@
     padding: 5px; /* Smaller padding */
     font-size: 0.8rem; /* Smaller text */
   }
+  .user-dropdown a {
+    padding: 5px; /* Smaller padding */
+    font-size: 0.8rem;
+  }
 }
