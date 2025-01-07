@@ -23,7 +23,7 @@ const AuthForm = ({ onAuthComplete }) => {
                 setIsSignUp(false); // Switch to sign-in mode
             } else {
                 // Sign-in logic
-                const response = await axios.post('https://quiet-escarpment-80258-487788fc171b.herokuapp.com/}api/auth/login', { email, password });
+                const response = await axios.post('https://quiet-escarpment-80258-487788fc171b.herokuapp.com/api/auth/login', { email, password });
                 const { token, isAdmin } = response.data;
 
                 // Store token in local storage
