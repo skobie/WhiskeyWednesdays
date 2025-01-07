@@ -161,6 +161,10 @@
   .event-logo h1{
     margin-top: 300px;
   }
+  .poster {
+    width:40%;
+
+  }
   @media (max-width: 1024px) {
   /* Adjust form width for tablets */
   .event-form {

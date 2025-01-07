@@ -135,7 +135,7 @@ const BookEvent = () => {
       <div className="karaoke">
         <div className="videos">
         <h1>Local Karaoke Night</h1>
-        <video controls="auto">
+        <video controls="auto" poster="/karaoke.poster.jpg">
         <source src='/wednesdays.mp4'type="video/mp4"></source>
           Your browser does not support the video tag.
           </video>
@@ -145,7 +145,7 @@ const BookEvent = () => {
           </div>
           <div className="drinkwithus">
           <h1>Join us.</h1>
-        <video controls="auto">
+        <video controls="auto" poster="/joinus.poster.jpeg">
           <source src='/Whiskeys.mp4' type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
