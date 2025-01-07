@@ -29,7 +29,7 @@ export const FoodProvider = ({ children }) => {
 
   // Fetch all Foods and categorize them
   const fetchFoods = async () => {
-    const allFoods = await fetchData(`${process.env.REACT_APP_URL}/api/foods`); 
+    const allFoods = await fetchData(`${process.env.REACT_APP_URL}api/foods`); 
     if (allFoods) {
       const categorizedFoods = allFoods.reduce((acc, food) => {
         if (acc[food.category]) {
@@ -62,7 +62,7 @@ export const FoodProvider = ({ children }) => {
   // Add a new Food
   const addFood = async (newFood) => {
     try {
-      await axios.post(`${process.env.REACT_APP_URL}/api/foods`, newFood, {
+      await axios.post(`${process.env.REACT_APP_URL}api/foods`, newFood, {
         headers: { 'Content-Type': 'application/json' },
       });
 
@@ -83,7 +83,7 @@ export const FoodProvider = ({ children }) => {
   // Remove a Food
   const deleteFood = async (_id) => {
     try {
-      await axios.delete(`${process.env.REACT_APP_URL}/api/foods/${_id}`);
+      await axios.delete(`${process.env.REACT_APP_URL}api/foods/${_id}`);
       setFoods((prevFoods) => {
         const updatedFoods = { ...prevFoods };
         for (const category in updatedFoods) {
@@ -100,7 +100,7 @@ export const FoodProvider = ({ children }) => {
 
   // Fetch Foods by category
   const fetchFoodsByCategory = async (category) => {
-    const categoryFoods = await fetchData(`${process.env.REACT_APP_URL}/api/foods/category/${category}`);
+    const categoryFoods = await fetchData(`${process.env.REACT_APP_URL}api/foods/category/${category}`);
     return categoryFoods || [];
   };
 

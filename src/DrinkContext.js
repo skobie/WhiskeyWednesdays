@@ -29,7 +29,7 @@ export const DrinkProvider = ({ children }) => {
 
   // Fetch all Drinks and categorize them
   const fetchDrinks = async () => {
-    const allDrinks = await fetchData(`${process.env.REACt_APP_URL}/api/drinks`);
+    const allDrinks = await fetchData(`${process.env.REACt_APP_URL}api/drinks`);
     if (allDrinks) {
       const categorizedDrinks = allDrinks.reduce((acc, drink) => {
         if (acc[drink.category]) {
@@ -53,7 +53,7 @@ export const DrinkProvider = ({ children }) => {
 
   // Fetch a single drink by ID
   const fetchDrinkById = async (_id) => {
-    const drink = await fetchData(`${process.env.REACt_APP_URL}/api/drinks/${_id}`);
+    const drink = await fetchData(`${process.env.REACt_APP_URL}api/drinks/${_id}`);
     if (drink) {
       setDrinkDetails(drink);
     }
@@ -62,7 +62,7 @@ export const DrinkProvider = ({ children }) => {
   // Add a new drink
   const addDrink = async (newDrink) => {
     try {
-      await axios.post(`${process.env.REACT_APP_URL}/api/drinks`, newDrink, {
+      await axios.post(`${process.env.REACT_APP_URL}api/drinks`, newDrink, {
         headers: { 'Content-Type': 'application/json' },
       });
 
@@ -83,7 +83,7 @@ export const DrinkProvider = ({ children }) => {
   // Remove a drink
   const deleteDrink = async (_id) => {
     try {
-      await axios.delete(`${process.env.REACT_APP_URL}/api/drinks/${_id}`);
+      await axios.delete(`${process.env.REACT_APP_URL}api/drinks/${_id}`);
       setDrinks((prevDrinks) => {
         const updatedDrinks = { ...prevDrinks };
         for (const category in updatedDrinks) {
@@ -100,7 +100,7 @@ export const DrinkProvider = ({ children }) => {
 
   // Fetch drinks by category
   const fetchDrinksByCategory = async (category) => {
-    const categoryDrinks = await fetchData(`${process.env.REACT_APP_URL}/api/drinks/category/${category}`);
+    const categoryDrinks = await fetchData(`${process.env.REACT_APP_URL}api/drinks/category/${category}`);
     return categoryDrinks || [];
   };
 
