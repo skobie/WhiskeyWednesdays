@@ -17,7 +17,7 @@ const ResetPassword = () => {
             const checkToken = async () => {
                 try {
                     // Try verifying the token by sending a request
-                    await axios.post(`http://localhost:5000/api/auth/reset-password/${token}`, { newPassword: '' });
+                    await axios.post(`${process.env.REACT_APP_URL}api/auth/reset-password/${token}`, { newPassword: '' });
                     hasCheckedRef.current = true;  // Mark the token check as done
                 } catch (err) {
                     // If token is expired or invalid, show the alert and redirect
@@ -44,7 +44,7 @@ const ResetPassword = () => {
         e.preventDefault();
     
         try {
-            const response = await axios.post(`http://localhost:5000/api/auth/reset-password/${token}`, { newPassword });
+            const response = await axios.post(`${process.env.REACT_APP_URL}api/auth/reset-password/${token}`, { newPassword });
             setMessage(response.data.message);
             setError(''); // Clear any previous errors
             alert('Password succesfully changed!');
