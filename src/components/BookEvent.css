@@ -83,9 +83,9 @@
     width:100%;
   }
   .card-container{
-    display:grid;
+    display:flex;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Dynamic columns */
-    
+
     }
   
   .food{
@@ -217,7 +217,7 @@
 
   .card-container {
     margin: 0 auto;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    flex-direction: column;
   }
 
   .food, .private-events, .drinks, .vendors {
@@ -264,6 +264,9 @@
   .event-form, .picture-container {
     width: 100%;
     padding: 10px;
+  }
+  .card-container {
+    flex-direction: column;
   }
 
   .food, .private-events, .drinks, .vendors {
