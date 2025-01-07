@@ -137,4 +137,99 @@
   font-family: 'Libre Baskerville', serif;
   text-shadow: 2px 2px black;
 }
-  
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 1rem;
+  }
+
+  .admin-dashboard h1 {
+    font-size: 2rem; /* Smaller heading for mobile */
+    margin-bottom: 1.5rem;
+  }
+
+  .drink-form {
+    width: 100%; /* Full width for form */
+    padding: 0 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem; /* Reduced margin */
+  }
+
+  .whiskey-list {
+    flex-direction: column; /* Stack whiskey items vertically */
+    margin-top: 1rem;
+  }
+
+  .whiskey-item {
+    width: 100%; /* Whiskey items take full width on mobile */
+    margin: 1rem 0; /* Vertical margin for spacing */
+  }
+
+  .whiskey-item img {
+    height: 150px; /* Smaller images for mobile */
+  }
+
+  .form-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-toggle-btn {
+    margin: 10px 0; /* Add some space between toggle buttons */
+  }
+}
+
+/* For devices with a maximum width of 480px (smartphones) */
+@media (max-width: 480px) {
+  .admin-dashboard {
+    padding: 0.5rem; /* Less padding for smaller screens */
+  }
+
+  .admin-dashboard h1 {
+    font-size: 1.8rem; /* Smaller font size for smaller devices */
+  }
+
+  .add-whiskey-btn {
+    font-size: 1rem; /* Adjust button size for smaller screens */
+    padding: 0.8rem 1.5rem;
+  }
+
+  .drink-form {
+    width: 100%; /* Full width for form */
+    gap: 0.8rem; /* Reduced gap */
+  }
+
+  .form-group label {
+    font-size: 1rem; /* Smaller labels */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem; /* Smaller input fields */
+  }
+
+  button {
+    font-size: 1rem; /* Smaller button text */
+    padding: 0.8rem 1.5rem;
+  }
+
+  .whiskey-item {
+    width: 100%; /* Whiskey items take full width on small screens */
+    margin: 1rem 0;
+  }
+
+  .whiskey-item img {
+    height: 120px; /* Smaller images for mobile */
+  }
+
+  .form-toggle-btn {
+    font-size: 0.9rem; /* Adjusted font size */
+    margin-right: 0;
+  }
+
+  .drink-form h2 {
+    font-size: 1.2rem; /* Smaller heading for the form */
+  }
+}
