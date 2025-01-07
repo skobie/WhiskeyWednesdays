@@ -9,7 +9,7 @@
   margin: 200px;
 }
 
-.whiskey-menu {
+ .whiskey-menu {
   color: white;
   padding: 20px;
   font-family: 'Libre Baskerville', serif;
@@ -222,4 +222,5 @@
   .whiskey-price {
     font-size: 1rem; /* Adjust price font size */
   }
+  
 }
