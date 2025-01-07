@@ -14,7 +14,7 @@ const ForgotPassword = () => {
 
         try {
             // Send the email to the forgot password endpoint
-            const response = await axios.post('/api/auth/forgot-password', { email });
+            const response = await axios.post(`${process.env.REACT_APP_URL}api/auth/forgot-password`, { email });
             setMessage(response.data.message); // Display success message
             setError(''); // Clear any existing errors
         } catch (err) {
