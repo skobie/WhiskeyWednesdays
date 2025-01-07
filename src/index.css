@@ -31,9 +31,9 @@ html, body {
   transition: all 0.3s ease-in-out; /* Smooth transition for changes */
 }
 @media (max-width: 480px){
-.app-container {
-  background-size: contain; /* Adjusts for smaller screens */
-  background-attachment: scroll; /* Fallback for mobile devices */
-}
-  
+  .app-container {
+    background-attachment: none;
+    background: url('/public/short.jpg');
+
+  }
 }

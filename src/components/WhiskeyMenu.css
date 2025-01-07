@@ -222,5 +222,13 @@
   .whiskey-price {
     font-size: 1rem; /* Adjust price font size */
   }
-  
+  .category-section:hover {
+    box-shadow: none; /* Gold glowing effect */
+    background-color: none; /* Optional: darker background on hover */
+  }
+  .category-section {
+      box-shadow: 0 0 15px 5px gold; /* Gold glowing effect */
+      background-color: rgba(0, 0, 0, 0.8); /* Optional: darker background on hover */
+    
+  }
 }
