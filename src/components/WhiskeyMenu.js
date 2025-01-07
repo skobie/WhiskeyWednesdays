@@ -29,7 +29,12 @@ const WhiskeyMenu = ({ userRole }) => {
       const fetchedDrinks = {};
 
       for (const category of categories) {
-        const drinksByCategory = await fetchDrinksByCategory(category);
+        let drinksByCategory = await fetchDrinksByCategory(category);
+
+        drinksByCategory = drinksByCategory.sort((a, b) =>
+        a.namelocaleCompare(b.name)
+      );
+
         fetchedDrinks[category] = drinksByCategory;
       }
       setCategoryDrinks(fetchedDrinks);
