@@ -32,7 +32,7 @@ const WhiskeyMenu = ({ userRole }) => {
         let drinksByCategory = await fetchDrinksByCategory(category);
 
         drinksByCategory = drinksByCategory.sort((a, b) =>
-        a.namelocaleCompare(b.name)
+        a.name.localeCompare(b.name)
       );
 
         fetchedDrinks[category] = drinksByCategory;
