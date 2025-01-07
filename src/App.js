@@ -31,7 +31,7 @@ function App() {
     <FoodProvider>
     <DrinkProvider>
     <Router>
-      <div className="app-container">
+      <div className="app-container fixed-background">
         <Header />
         <div className="content">
           <Routes>
