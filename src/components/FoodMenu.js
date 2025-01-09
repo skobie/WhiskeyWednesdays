@@ -90,11 +90,20 @@ const FoodMenu = ({ userRole }) => {
                   categoryFoods[category].map((food) => (
                     <li key={food._id} className="food-item">
                       <div className="food-card">
+                        {/* Conditionally render image */}
+                        {food.image && (
                         <img src={food.image} alt={food.name} className="food-image" />
+                        )}
                         <div className="food-info">
                           <h3 className="food-name">{food.name}</h3>
+                          {/* Conditionally render description */}
+                          {food.description && (
                           <p className="food-description">{food.description}</p>
+                          )}
+                          {/* Conditionally render price */}
+                          {food.price && (
                           <span className="food-price">${food.price}</span>
+                          )}
                           {token && isAdmin && (
                         <button 
                         className="delete-button"
