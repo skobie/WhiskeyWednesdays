@@ -92,17 +92,17 @@ const WhiskeyMenu = ({ userRole }) => {
                   {expandedDrinkId === drink._id && (
                     <div className={`whiskey-details ${expandedDrinkId === drink._id ? 'open' : ''}`}>
                       {/* Conditionally render description */}
-                      {drink.description && (
+                      {drink.description && 
                       <p>{drink.description}</p>
-                      )}
+                      }
                       {/* Conditionally render price */}
-                      {drink.price && (
+                      {drink.price && 
                       <span className="whiskey-price">${drink.price}</span>
-                      )}
+                      }
                       {/* Conditonally render image */}
-                      {drink.image && (
+                      {drink.image && 
                       <img src={drink.image} alt={drink.name} className="whiskey-image" />
-                      )}
+                      }
                       {token && isAdmin &&(
                         <button 
                         className="delete-button"
