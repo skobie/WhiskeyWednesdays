@@ -137,7 +137,7 @@ const AdminDashboard = () => {
               name="description"
               value={foodData.description}
               onChange={handleFoodChange}
-              required
+             // required 
             />
           </div>
           <div className="form-group">
@@ -147,7 +147,7 @@ const AdminDashboard = () => {
               name="price"
               value={foodData.price}
               onChange={handleFoodChange}
-              required
+              //required
             />
           </div>
           <div className="form-group">
@@ -157,7 +157,7 @@ const AdminDashboard = () => {
               name="image"
               value={foodData.image}
               onChange={handleFoodChange}
-              required
+              //required
             />
           </div>
           <div className="form-group">
