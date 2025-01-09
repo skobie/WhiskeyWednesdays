@@ -203,7 +203,7 @@ const AdminDashboard = () => {
               name="description"
               value={drinkData.description}
               onChange={handleDrinkChange}
-              required
+              //required
             />
           </div>
           <div className="form-group">
@@ -213,7 +213,7 @@ const AdminDashboard = () => {
               name="price"
               value={drinkData.price}
               onChange={handleDrinkChange}
-              required
+              //required
             />
           </div>
           <div className="form-group">
@@ -223,7 +223,7 @@ const AdminDashboard = () => {
               name="image"
               value={drinkData.image}
               onChange={handleDrinkChange}
-              required
+              //required
             />
           </div>
           <div className="form-group">
