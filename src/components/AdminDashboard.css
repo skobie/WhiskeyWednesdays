@@ -148,7 +148,7 @@
   }
 
   .drink-form {
-    width: 100%; /* Full width for form */
+    width: 90%; /* Full width for form */
     padding: 0 1rem;
   }
 
@@ -197,7 +197,7 @@
   }
 
   .drink-form {
-    width: 100%; /* Full width for form */
+    width: 90%; /* Full width for form */
     gap: 0.8rem; /* Reduced gap */
   }
 
